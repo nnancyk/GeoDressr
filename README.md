@@ -2,8 +2,7 @@
 
 *A weather-based outfit recommender that tells you what to wear and helps you shop for it.*
 
-![GeoDressr screenshot](screenshot-placeholder.png)
-<!-- TODO: replace with a real screenshot of trial.html running -->
+<img width="1628" height="808" alt="image" src="https://github.com/user-attachments/assets/3a574b58-d115-41d0-a23d-b12311b900e4" />
 
 ## The Problem
 
