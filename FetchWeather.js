@@ -1,3 +1,6 @@
+ /* Not used by the live app. This was an earlier prototype of the weather-fetching + clothing-suggestion logic, using simple rule-based suggestions
+  and Google Shopping search links instead of the OpenAI-based recommendations in ClothingRecommendation.js. */
+
 window.addEventListener("DOMContentLoaded", (event) => {
     const submitButton = document.getElementById("submitButton");
     if(submitButton){
@@ -18,7 +21,7 @@ function zipSubmit() {
 }
 
 function getWeatherData(zipcodeP) {
-  const apiKey = 'e4ef714a46fb2b1bd0d07a7483838984';
+  const apiKey = CONFIG.OPENWEATHER_API_KEY;
   const zipcode = zipcodeP;
   const apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}&units=imperial`;
 

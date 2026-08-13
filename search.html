@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Standalone prototype, not part of the live app. It was used to test the Google Custom Search API in isolation, with 2 hardcoded example queries.
+  Logic was built into the real, dynamic searchImages() function in ClothingRecommendation.js. Kept for reference. -->
 <html lang="en">
 <head>
     <title>Google Custom Search API Example</title>
@@ -10,11 +12,11 @@
     <button id="refreshButton0" style="display:none;" onclick="refresh(0)">Refresh Outerwear</button>
     <button id="refreshButton1" style="display:none;" onclick="refresh(1)">Refresh Shoes</button>
 
-
+    <script src="config.js"></script>
     <script>
 
-        const apiKey = 'AIzaSyCto-qUtmpIrQkpIH96ILduWLBb5_TvUbY';
-        const cx = 'c37d426998d0747bf';
+        const apiKey = CONFIG.GOOGLE_SEARCH_API_KEY;
+        const cx = CONFIG.GOOGLE_SEARCH_CX;
         
         // hard code queries, 2 for now
         var queries = ['buy green parka', 'buy white sneakers'];

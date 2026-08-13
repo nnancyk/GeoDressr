@@ -34,7 +34,7 @@ function zipSubmit() {
 */
 function fetchWeather(zipcodeP) {
   const zipcode = zipcodeP;
-  const apiKey = 'e4ef714a46fb2b1bd0d07a7483838984';
+  const apiKey = CONFIG.OPENWEATHER_API_KEY;
   const apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}&units=imperial`;
 
   // call Open Weather API with custom api key and zipcode
@@ -87,7 +87,7 @@ async function getRecommendation(tempP, descrP) {
       return;
   }
 
-  const apiKey = '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';
+  const apiKey = CONFIG.OPENAI_API_KEY;
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
   var response;
 
@@ -160,8 +160,8 @@ var dataArray = [];
   The function calls displayImage() with the data of the image.
 */
 function searchImages(queries) {
-  const apiKey = 'AIzaSyCto-qUtmpIrQkpIH96ILduWLBb5_TvUbY';
-  const cx = 'c37d426998d0747bf';
+  const apiKey = CONFIG.GOOGLE_SEARCH_API_KEY;
+  const cx = CONFIG.GOOGLE_SEARCH_CX;
 
   // API called for each clothing item in the array of queries
   for (let queryIndex = 0; queryIndex < queries.length; queryIndex++) {
